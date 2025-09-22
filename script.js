@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 3. Después de 1.5 segundos, comienza a mostrar el resto de las flores
         setTimeout(() => {
-            const numberOfFlowers = 19; 
+            const numberOfFlowers = 3; 
             const flowerEmoji = '🌻'; 
 
             for (let i = 0; i < numberOfFlowers; i++) {
@@ -43,4 +43,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 1500); // 1.5 segundos
     });
+
 });
