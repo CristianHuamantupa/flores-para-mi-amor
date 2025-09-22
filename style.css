@@ -13,10 +13,10 @@ body {
 }
 
 .main-content-container {
-    display: flex; /* Hacemos que el contenedor principal sea un flexbox */
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Espacio entre el texto y el GIF */
+    gap: 30px;
     padding: 30px;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.15);
@@ -27,7 +27,7 @@ body {
 
 .text-and-button {
     display: flex;
-    flex-direction: column; /* Apila los elementos verticalmente */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -71,12 +71,10 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Ocultamos el contenedor del GIF y las flores por defecto */
 #gif-and-flowers-container {
     display: none; 
 }
 
-/* Estilo para el contenedor del GIF */
 .gif-container {
     margin: 0;
     display: flex;
@@ -84,7 +82,7 @@ button:hover {
 }
 
 .flower-gif {
-    max-height: 65vh; /* Limita la altura del GIF */
+    max-height: 65vh;
     height: auto;
     width: auto;
     border-radius: 10px;
@@ -99,7 +97,6 @@ button:hover {
     gap: 15px;
 }
 
-/* Animación para las flores */
 @keyframes popIn {
     0% {
         transform: scale(0) rotate(0deg);
@@ -114,4 +111,33 @@ button:hover {
 .flower {
     font-size: 4rem;
     animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+/* ------------------------------------------- */
+/* Ajustes para dispositivos móviles */
+/* ------------------------------------------- */
+
+@media (max-width: 768px) {
+    .main-content-container {
+        flex-direction: column; /* Apila los elementos verticalmente en móviles */
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .message,
+    .subtitle {
+        font-size: 1.8em; /* Hace el texto más pequeño para que quepa */
+    }
+
+    .subtitle {
+        font-size: 2.2em;
+    }
+    
+    .flower-gif {
+        max-height: 50vh; /* Ajusta el tamaño del GIF para pantallas móviles */
+    }
+
+    .flowers-container {
+        margin-top: 20px;
+    }
 }
